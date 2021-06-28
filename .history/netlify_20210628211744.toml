@@ -1,8 +1,0 @@
-[build]
-functions = "functions"
-[[redirects]]
-to="/.netlify/functions/api/:splat"
-from="/*"
-status=200
-
-DB_CONNECTION="mongodb+srv://admin:Saki2612!@saro.8051o.mongodb.net/Saro?retryWrites=true&w=majority"
