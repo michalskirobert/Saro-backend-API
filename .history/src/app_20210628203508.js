@@ -2,12 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const postsRoute = require("./src/routes/posts");
-const initRoute = require("./src/routes/init");
+const postsRoute = require("./routes/posts");
+const initRoute = require("./routes/init");
 const serverless = require("serverless-http");
 require("dotenv/config");
-
-const app = express();
 
 //middlware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,6 +20,8 @@ mongoose.connect(process.env.DB_CONNECTION, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+const app = express();
 
 app.listen(3000);
 

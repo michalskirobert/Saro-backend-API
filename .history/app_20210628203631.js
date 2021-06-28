@@ -7,8 +7,6 @@ const initRoute = require("./src/routes/init");
 const serverless = require("serverless-http");
 require("dotenv/config");
 
-const app = express();
-
 //middlware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -22,6 +20,8 @@ mongoose.connect(process.env.DB_CONNECTION, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+const app = express();
 
 app.listen(3000);
 

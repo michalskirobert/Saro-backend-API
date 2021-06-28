@@ -1,7 +1,6 @@
 {
   "name": "saro-api",
   "version": "1.0.0",
-  "homepage": "./src",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
