@@ -2,9 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const postsRoute = require("./routes/posts");
+const initRoute = require("./routes/init");
 const serverless = require("serverless-http");
 const EnglishRoute = require("./routes/en");
-const initRoute = require("./routes");
 require("dotenv/config");
 
 const app = express();
@@ -16,8 +17,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(cors());
 
-app.use("/en", EnglishRoute);
+app.use("/posts", postsRoute);
 app.use("/init", initRoute);
+app.use("/en", EnglishRoute);
 app.use("/", router);
 
 //connect DB

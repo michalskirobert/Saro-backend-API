@@ -17,7 +17,6 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(cors());
 
 app.use("/en", EnglishRoute);
-app.use("/init", initRoute);
 app.use("/", router);
 
 //connect DB
