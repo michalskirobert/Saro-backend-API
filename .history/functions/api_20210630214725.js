@@ -26,4 +26,6 @@ mongoose.connect(process.env.DB_CONNECTION, {
   useUnifiedTopology: true,
 });
 
+app.listen(8000);
+
 module.exports.handler = serverless(app);
