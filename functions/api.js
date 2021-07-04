@@ -14,17 +14,13 @@ const router = express.Router();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
-app.use(cors());
 
 app.use("/en", EnglishRoute);
 app.use("/init", initRoute);
 app.use("/", router);
 
 //cors
-const allowedOrigins = [
-  "http://localhost:3000",
-  "https://www.i-saro.netlify.app",
-];
+const allowedOrigins = ["http://localhost:3000", "https://i-saro.netlify.app"];
 app.use(
   cors({
     origin: function (origin, callback) {
