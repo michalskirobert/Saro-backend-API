@@ -29,18 +29,3 @@ mongoose.connect(process.env.DB_CONNECTION, {
 app.listen(3000);
 
 module.exports.handler = serverless(app);
-exports.handler = async (event, context) => {
-  return {
-    statusCode: 200,
-    headers: {
-      /* Required for CORS support to work */
-      "Access-Control-Allow-Origin": "*",
-      /* Required for cookies, authorization headers with HTTPS */
-      "Access-Control-Allow-Credentials": true,
-    },
-    body: JSON.stringify({
-      message: "Hello from netlify",
-      event: event,
-    }),
-  };
-};
