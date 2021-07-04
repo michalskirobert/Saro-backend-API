@@ -1,9 +1,9 @@
 const express = require("express");
-const cors = require("cors");
 const dictionariesRoute = require("./dictionaries");
-const EnglishRoute = express();
-EnglishRoute.use(cors());
+const EnglishRoute = express.Router();
+const eventsRoute = require("./events");
 
 EnglishRoute.use("/dictionaries", dictionariesRoute);
+EnglishRoute.use("/events", eventsRoute);
 
 module.exports = EnglishRoute;

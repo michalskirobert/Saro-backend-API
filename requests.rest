@@ -1,0 +1,1 @@
+GET http://localhost:8888/en/events?page=1&size=10
