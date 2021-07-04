@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const Post = require("./../../models/posts");
+const Events = require("./../../models/events");
 
 router.get("/", async (req, res) => {
   try {
-    const posts = await Post.find();
+    const posts = await Events.find();
     res.json(posts);
   } catch (error) {
     res.json(error);
@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const post = new Post({
+  const post = new Events({
     title: req.body.title,
     desc: req.body.desc,
   });
@@ -21,17 +21,17 @@ router.post("/", async (req, res) => {
 });
 
 router.get("/:postId", async (req, res) => {
-  const post = await Post.findById(req.params.postId);
+  const post = await Events.findById(req.params.postId);
   res.json(post);
 });
 
 router.delete("/:postId", async (req, res) => {
-  const post = await Post.remove({ _id: req.params.postId });
+  const post = await Events.remove({ _id: req.params.postId });
   res.json(post);
 });
 
 router.patch("/:postId", async (req, res) => {
-  const updatedPost = await Post.updateOne(
+  const updatedPost = await Events.updateOne(
     { _id: req.params.postId },
     { $set: { modfidedDate: Date.now } }
   );
