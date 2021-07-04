@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
   try {
     res.send(data);
   } catch (error) {
-    res.json(error);
+    res.json({ error: `Zjebałaś tutaj jest error ${error}` });
   }
 });
 
