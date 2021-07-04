@@ -1,3 +1,4 @@
 .env
 nodemodules
 node_modules
+.history
