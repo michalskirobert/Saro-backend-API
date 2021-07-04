@@ -1,7 +1,7 @@
 const express = require("express");
-const initRoute = require("./dictionaries");
+const dictionariesRoute = require("./dictionaries");
 const EnglishRoute = express();
 
-EnglishRoute.use("/dictionaries", initRoute);
+EnglishRoute.use("/dictionaries", dictionariesRoute);
 
 module.exports = EnglishRoute;

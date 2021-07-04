@@ -27,5 +27,6 @@ mongoose.connect(process.env.DB_CONNECTION, {
 });
 
 app.listen(3000);
+app.listen(8888);
 
 module.exports.handler = serverless(app);
