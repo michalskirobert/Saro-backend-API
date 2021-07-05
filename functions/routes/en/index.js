@@ -1,7 +1,7 @@
 const express = require("express");
 const dictionariesRoute = require("./dictionaries");
-const EnglishRoute = express.Router();
 const eventsRoute = require("./events");
+const EnglishRoute = express.Router();
 
 EnglishRoute.use("/dictionaries", dictionariesRoute);
 EnglishRoute.use("/events", eventsRoute);
