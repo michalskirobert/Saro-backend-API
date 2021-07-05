@@ -1,4 +1,4 @@
-function paginatedResults(model) {
+async function paginatedResults(model) {
   return async (req, res, next) => {
     const page = parseInt(req.query.page);
     const size = parseInt(req.query.size);

@@ -3,14 +3,11 @@ const app = express.Router();
 const Events = require("./../../../models/events");
 const paginatedResults = require("../../../helpers/pagination");
 
-app.get("/", paginatedResults(Events), async (req, res) => {
+app.get("/", paginatedResults(Events), (req, res) => {
   try {
     res.json(res.paginatedResults);
   } catch (error) {
-    if (error.response.status === 404) {
-      console.error("Jesteś :)))) Z...");
-      res.json(error);
-    }
+    res.json(error);
   }
 });
 
