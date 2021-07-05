@@ -21,18 +21,14 @@ const PostSchema = mongoose.Schema({
   place: requiredString,
   startDate: {
     type: Date,
-    default: Date.now(),
-    required: false,
+    required: true,
   },
   endDate: {
     type: Date,
     required: false,
   },
-  time: {
-    type: Date,
-    required: true,
-  },
-  link: requiredString,
+  time: requiredString,
+  url: String,
 });
 
 module.exports = mongoose.model("Events", PostSchema);

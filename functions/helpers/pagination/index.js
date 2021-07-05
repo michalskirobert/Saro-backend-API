@@ -5,14 +5,18 @@ function paginatedResults(model) {
     const startIndex = (page - 1) * size;
     const endIndex = page * size;
 
-    const results = {};
+    let results = {};
 
     if (endIndex < (await model.countDocuments().exec())) {
-      results.next = { page: page + 1, size: size };
+      results.next = { page: page + 1, size: size, totalItems: model.length };
     }
 
     if (startIndex > 0) {
-      results.previous = { page: page - 1, size: size };
+      results.previous = {
+        page: page - 1,
+        size: size,
+        totalItems: model.length,
+      };
     }
 
     try {
