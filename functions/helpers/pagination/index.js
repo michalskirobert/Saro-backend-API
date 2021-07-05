@@ -1,4 +1,4 @@
-async function paginatedResults(model) {
+function paginatedResults(model) {
   return async (req, res, next) => {
     const page = parseInt(req.query.page);
     const size = parseInt(req.query.size);
@@ -24,7 +24,7 @@ async function paginatedResults(model) {
       res.paginatedResults = results;
       next();
     } catch (error) {
-      res.status(500).json(error.message);
+      res.status(500).json({ errorMessage: error.message });
     }
   };
 }
