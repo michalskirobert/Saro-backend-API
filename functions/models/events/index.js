@@ -11,7 +11,7 @@ const PostSchema = mongoose.Schema({
   category: requiredString,
   imgURL: requiredString,
   imagesURL: {
-    type: String,
+    type: Array,
     required: false,
   },
   language: requiredString,
