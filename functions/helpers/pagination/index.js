@@ -6,11 +6,10 @@ function paginatedResults(model) {
 
     let items = {};
 
-    items.totalCount = model.length;
-
     try {
       items.items = await model.find().limit(size).skip(startIndex).exec();
       res.paginatedResults = items;
+      items.totalCount = model.length;
       next();
     } catch (error) {
       res.status(500).json({ errorMessage: error.message });
