@@ -5,23 +5,24 @@ function paginatedResults(model) {
     const startIndex = (page - 1) * size;
     const endIndex = page * size;
 
-    let results = {};
+    let items = {};
+
+    items.totalCount = model.length;
 
     if (endIndex < (await model.countDocuments().exec())) {
-      results.next = { page: page + 1, size: size, totalItems: model.length };
+      items.next = { page: page + 1, size: size };
     }
 
     if (startIndex > 0) {
-      results.previous = {
+      items.previous = {
         page: page - 1,
         size: size,
-        totalItems: model.length,
       };
     }
 
     try {
-      results.results = await model.find().limit(size).skip(startIndex).exec();
-      res.paginatedResults = results;
+      items.items = await model.find().limit(size).skip(startIndex).exec();
+      res.paginatedResults = items;
       next();
     } catch (error) {
       res.status(500).json({ errorMessage: error.message });
