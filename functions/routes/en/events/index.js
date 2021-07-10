@@ -1,31 +1,9 @@
 const express = require("express");
 const app = express.Router();
 const Events = require("./../../../models/events");
+const paginatedResults = require("../../../helpers/pagination");
 
-const paginatedResults = (model) => async (req, res, next) => {
-  console.log(model);
-  const page = parseInt(req.query.page);
-  const size = parseInt(req.query.size);
-  const startIndex = (page - 1) * size;
-
-  let items = {};
-
-  console.log("exec");
-
-  try {
-    console.log("exec2");
-    items.items = await model.find().limit(size).skip(startIndex).exec();
-    res.paginatedResults = items;
-    items.totalCount = model.length;
-    console.log("exec3");
-    next();
-  } catch (error) {
-    res.status(400).json({ errorMessage: "404 not found" });
-    res.status(500).json({ errorMessage: error.message });
-  }
-};
-
-app.get("/", paginatedResults(Events), (req, res) => {
+app.get("/*", paginatedResults(Events), (req, res) => {
   try {
     res.json(res.paginatedResults);
   } catch (error) {
