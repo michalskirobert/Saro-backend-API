@@ -23,7 +23,7 @@ function paginatedResults(model) {
 
 module.exports = paginatedResults;
 
-app.get("/", paginatedResults(Events), (req, res) => {
+app.get("/", paginatedResults(Events), async (req, res) => {
   try {
     res.json(res.paginatedResults);
   } catch (error) {
