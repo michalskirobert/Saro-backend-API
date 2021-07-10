@@ -1,146 +1,193 @@
-[ {
-  "classLink" : "",
-  "content" : [ {
-    "path" : "/panel",
-    "title" : "Admin panel"
-  }, {
-    "status" : [ 40, 50, 60 ],
-    "subcontent" : [ {
-      "path" : "/panel/add/events",
-      "title" : "Events"
-    }, {
-      "path" : "/panel/add/news",
-      "title" : "News"
-    }, {
-      "path" : "/panel/add/articles",
-      "title" : "Article"
-    } ],
-    "title" : "Add"
-  }, {
-    "status" : [ 40, 50, 60 ],
-    "subcontent" : [ {
-      "path" : "/panel/manage/events",
-      "title" : "Events"
-    }, {
-      "path" : "/panel/manage/news",
-      "title" : "News"
-    }, {
-      "path" : "/panel/manage/articles",
-      "title" : "Article"
-    } ],
-    "title" : "Managment"
-  }, {
-    "subcontent" : [ {
-      "title" : "General"
-    }, {
-      "path" : "/panel/translate/footer",
-      "title" : "Footer"
-    } ],
-    "title" : "Translations"
-  } ],
-  "isLogged" : true,
-  "status" : [ 30, 40, 50, 60 ],
-  "title" : "CMS SARO"
-}, {
-  "classLink" : "",
-  "isLogged" : false,
-  "path" : "/",
-  "status" : [ 0, 10, 20, 30, 40, 50, 60 ],
-  "title" : "Home"
-}, {
-  "classLink" : "",
-  "content" : [ {
-    "path" : "/lessons",
-    "title" : "Begginer"
-  }, {
-    "path" : "lessons/",
-    "title" : "Elementary"
-  }, {
-    "path" : "/lessons",
-    "title" : "Pre-intermediate"
-  }, {
-    "path" : "/lessons",
-    "title" : "Low Intermediate"
-  }, {
-    "path" : "/lessons",
-    "title" : "Intermediate"
-  }, {
-    "path" : "/lessons",
-    "title" : "Upper Intermediate"
-  }, {
-    "path" : "/lessons",
-    "title" : "Pre-advanced"
-  }, {
-    "path" : "/lessons",
-    "title" : "Advanced"
-  }, {
-    "path" : "/lessons",
-    "title" : "Very Advanced"
-  } ],
-  "isLogged" : false,
-  "path" : "/lessons",
-  "status" : [ 0, 10, 20, 30, 40, 50, 60 ],
-  "title" : "Lessons"
-}, {
-  "classLink" : "",
-  "isLogged" : false,
-  "path" : "/tests",
-  "status" : [ 10, 20, 30, 40, 50, 60 ],
-  "title" : "Tests"
-}, {
-  "classLink" : "",
-  "content" : [ {
-    "path" : "",
-    "title" : "Foods"
-  }, {
-    "path" : "",
-    "title" : "Curiosities"
-  }, {
-    "path" : "",
-    "title" : "Traditions"
-  }, {
-    "path" : "",
-    "title" : "Media"
-  }, {
-    "path" : "",
-    "title" : "Tools"
-  }, {
-    "path" : "",
-    "title" : "Quiz"
-  }, {
-    "path" : "",
-    "title" : "Dialogue"
-  }, {
-    "path" : "",
-    "title" : "Beauty"
-  } ],
-  "isLogged" : false,
-  "path" : "/stuff",
-  "status" : [ 0, 10, 20, 30, 40, 50, 60 ],
-  "title" : "Stuff"
-}, {
-  "classLink" : "",
-  "isLogged" : false,
-  "path" : "/community",
-  "status" : [ 0, 10, 20, 30, 40, 50, 60 ],
-  "title" : "Community"
-}, {
-  "classLink" : "",
-  "isLogged" : false,
-  "path" : "/about",
-  "status" : [ 0, 10, 20, 30, 40, 50, 60 ],
-  "title" : "About Us"
-}, {
-  "action" : 10,
-  "classLink" : "",
-  "isLogged" : false,
-  "path" : "/sign-in",
-  "status" : [ 0, 10, 20, 30, 40, 50, 60 ],
-  "title" : "Sign In"
-}, {
-  "classLink" : "",
-  "isLogged" : true,
-  "path" : "/sign-in",
-  "status" : [ 10, 20, 30, 40, 50, 60 ],
-  "title" : "Sign Out"
-} ]
+{
+  "nav": [
+    {
+      "classLink": "",
+      "content": [
+        {
+          "path": "/panel",
+          "title": "Admin panel"
+        },
+        {
+          "status": [40, 50, 60],
+          "subcontent": [
+            {
+              "path": "/panel/add/events",
+              "title": "Events"
+            },
+            {
+              "path": "/panel/add/news",
+              "title": "News"
+            },
+            {
+              "path": "/panel/add/articles",
+              "title": "Article"
+            }
+          ],
+          "title": "Add"
+        },
+        {
+          "status": [40, 50, 60],
+          "subcontent": [
+            {
+              "path": "/panel/manage/events",
+              "title": "Events"
+            },
+            {
+              "path": "/panel/manage/news",
+              "title": "News"
+            },
+            {
+              "path": "/panel/manage/articles",
+              "title": "Article"
+            }
+          ],
+          "title": "Managment"
+        },
+        {
+          "subcontent": [
+            {
+              "title": "General"
+            },
+            {
+              "path": "/panel/translate/footer",
+              "title": "Footer"
+            }
+          ],
+          "title": "Translations"
+        }
+      ],
+      "isLogged": true,
+      "status": [30, 40, 50, 60],
+      "title": "CMS SARO"
+    },
+    {
+      "classLink": "",
+      "isLogged": false,
+      "path": "/",
+      "status": [0, 10, 20, 30, 40, 50, 60],
+      "title": "Home"
+    },
+    {
+      "classLink": "",
+      "content": [
+        {
+          "path": "/lessons",
+          "title": "Begginer"
+        },
+        {
+          "path": "lessons/",
+          "title": "Elementary"
+        },
+        {
+          "path": "/lessons",
+          "title": "Pre-intermediate"
+        },
+        {
+          "path": "/lessons",
+          "title": "Low Intermediate"
+        },
+        {
+          "path": "/lessons",
+          "title": "Intermediate"
+        },
+        {
+          "path": "/lessons",
+          "title": "Upper Intermediate"
+        },
+        {
+          "path": "/lessons",
+          "title": "Pre-advanced"
+        },
+        {
+          "path": "/lessons",
+          "title": "Advanced"
+        },
+        {
+          "path": "/lessons",
+          "title": "Very Advanced"
+        }
+      ],
+      "isLogged": false,
+      "path": "/lessons",
+      "status": [0, 10, 20, 30, 40, 50, 60],
+      "title": "Lessons"
+    },
+    {
+      "classLink": "",
+      "isLogged": false,
+      "path": "/tests",
+      "status": [10, 20, 30, 40, 50, 60],
+      "title": "Tests"
+    },
+    {
+      "classLink": "",
+      "content": [
+        {
+          "path": "",
+          "title": "Foods"
+        },
+        {
+          "path": "",
+          "title": "Curiosities"
+        },
+        {
+          "path": "",
+          "title": "Traditions"
+        },
+        {
+          "path": "",
+          "title": "Media"
+        },
+        {
+          "path": "",
+          "title": "Tools"
+        },
+        {
+          "path": "",
+          "title": "Quiz"
+        },
+        {
+          "path": "",
+          "title": "Dialogue"
+        },
+        {
+          "path": "",
+          "title": "Beauty"
+        }
+      ],
+      "isLogged": false,
+      "path": "/stuff",
+      "status": [0, 10, 20, 30, 40, 50, 60],
+      "title": "Stuff"
+    },
+    {
+      "classLink": "",
+      "isLogged": false,
+      "path": "/community",
+      "status": [0, 10, 20, 30, 40, 50, 60],
+      "title": "Community"
+    },
+    {
+      "classLink": "",
+      "isLogged": false,
+      "path": "/about",
+      "status": [0, 10, 20, 30, 40, 50, 60],
+      "title": "About Us"
+    },
+    {
+      "action": 10,
+      "classLink": "",
+      "isLogged": false,
+      "path": "/sign-in",
+      "status": [0, 10, 20, 30, 40, 50, 60],
+      "title": "Sign In"
+    },
+    {
+      "classLink": "",
+      "isLogged": true,
+      "path": "/sign-in",
+      "status": [10, 20, 30, 40, 50, 60],
+      "title": "Sign Out"
+    }
+  ]
+}
