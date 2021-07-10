@@ -3,6 +3,7 @@ const app = express.Router();
 const Events = require("./../../../models/events");
 
 const paginatedResults = (model) => async (req, res, next) => {
+  console.log(model);
   const page = parseInt(req.query.page);
   const size = parseInt(req.query.size);
   const startIndex = (page - 1) * size;
@@ -24,7 +25,7 @@ const paginatedResults = (model) => async (req, res, next) => {
   }
 };
 
-app.get("/", paginatedResults(Events), async (req, res) => {
+app.get("/", paginatedResults(Events), (req, res) => {
   try {
     res.json(res.paginatedResults);
   } catch (error) {

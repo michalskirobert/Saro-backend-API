@@ -19,6 +19,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use("/en", EnglishRoute);
 app.use("/init", initRoute);
 app.use("/", router);
+app.disable("etag");
 
 //connect DB
 mongoose.connect(process.env.DB_CONNECTION, {
