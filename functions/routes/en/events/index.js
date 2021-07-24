@@ -1,13 +1,21 @@
 const express = require("express");
 const app = express.Router();
 const Events = require("./../../../models/events");
-const paginatedResults = require("../../../helpers/pagination");
+// const paginatedResults = require("../../../helpers/pagination");
 
-app.get("/*", paginatedResults(Events), (req, res) => {
+app.get("/", async (req, res, next) => {
+  const page = parseInt(req.query.page);
+  const size = parseInt(req.query.size);
+  const startIndex = (page - 1) * size;
+
   try {
-    res.json(res.paginatedResults);
+    items.items = await model.find().limit(size).skip(startIndex).exec();
+    res.paginatedResults = items;
+    items.totalCount = model.length;
+    res.json(items);
+    next();
   } catch (error) {
-    res.json(error);
+    res.status(500).json({ errorMessage: error.message });
   }
 });
 
